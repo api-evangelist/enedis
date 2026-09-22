@@ -1,26 +1,17 @@
 aid: enedis
-
 name: Enedis
-
 image: https://www.enedis.fr/sites/default/files/images/2022-10/_DSC2923.jpg
-
-description: 'Enedis is the French public electricity distribution network operator, managing the grid for millions of customers across France. It modernizes, maintains, and services the electricity distribution infrastructure, providing metering, outage management, and customer support. As a public service entity, Enedis plays a key role in France’s energy transition and grid reliability.'
-
+description: Enedis is the French public electricity distribution network operator, managing the grid for millions of customers across France.
+  It modernizes, maintains, and services the electricity distribution infrastructure, providing metering, outage management, and customer support.
+  As a public service entity, Enedis plays a key role in France’s energy transition and grid reliability.
 url: https://raw.githubusercontent.com/api-evangelist/enedis/refs/heads/main/apis.yml
-
 x-type: company
-
 x-source: harvest:energy
-
 x-tier: profiled
 x-tier-reason: enrichment pass 2026-09-22 (modular-v1; was harvest)
-
 specificationVersion: '0.20'
-
 created: '2026-09-22'
-
 modified: '2026-09-22'
-
 tags:
 - Company
 - Energy
@@ -28,13 +19,11 @@ tags:
 - Utility
 - France
 - Public Service
-
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
-
 common:
 - type: Vendors
   url: vendors/enedis-vendors.yml
@@ -44,20 +33,31 @@ common:
   url: security/enedis-domain-security.yml
 - type: Website
   url: https://www.enedis.fr/
-
-apis: []
-
+- type: Documentation
+  url: https://www.enedis.fr/espace-prestataires
+- type: Support
+  url: https://www.enedis.fr/aide-contact
+- type: TermsOfService
+  url: https://www.enedis.fr/mentions-legales-et-conditions-generales-dutilisation
+- type: PrivacyPolicy
+  url: https://www.enedis.fr/donnees-personnelles
+apis:
+- name: Enedis API
+  description: Enedis provides electricity distribution services; public API documentation is not publicly available, and developer pages return
+    404.
+  humanURL: https://www.enedis.fr/espace-prestataires
+  aid: enedis:enedis-api
 x-coverage:
   state: unreadable
   reason: js-rendered-docs
   detail: Developer portal page https://www.enedis.fr/developpeurs returns 404, no machine‑readable API docs found.
   evidence:
-    - url: https://www.enedis.fr/developpeurs
-      status: 404
+  - url: https://www.enedis.fr/developpeurs
+    status: 404
   checked: 2026-09-22
 x-enrichment:
   date: '2026-09-22'
-  status: enriched
-  artifacts_added: 4
+  status: nochange
+  artifacts_added: 0
   pass: modular-v1
   engine: identity=local,contract=local,surfaces=local,docs=local
