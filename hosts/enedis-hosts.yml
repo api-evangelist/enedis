@@ -1,0 +1,84 @@
+generated: '2026-09-22'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 5
+  other_domain: 0
+  platform: 0
+  roles:
+  - api
+  - data
+  - identity
+  - other
+  - website
+hosts:
+- host: api.enedis.fr
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: enedis.fr
+  role: api
+  relation: own
+- host: connect-racco.enedis.fr
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Login
+  serves: []
+  registrable_domain: enedis.fr
+  role: identity
+  relation: own
+- host: mon-compte-client.enedis.fr
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: enedis.fr
+  role: other
+  relation: own
+- host: opendata.enedis.fr
+  found_by:
+  - probed
+  - site-links
+  - namespace-probe
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  title: Open data d&#x27;Enedis
+  status: 200
+  registrable_domain: enedis.fr
+  role: data
+  relation: own
+- host: www.enedis.fr
+  found_by:
+  - pointer
+  - apis[]
+  - probed
+  - docs-index
+  - contract-discovery
+  - well-known
+  - vendor-detect
+  types:
+  - Website
+  - Documentation
+  - Support
+  - TermsOfService
+  - PrivacyPolicy
+  serves:
+  - docs
+  - cdn
+  vendor: cloudfront
+  registrable_domain: enedis.fr
+  role: website
+  relation: own
